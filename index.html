@@ -1,39 +1,255 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ufuk Demir</title>
+<style>
+  :root {
+    --ink: #111111;
+    --muted: #555555;
+    --faint: #888888;
+    --border: #eaeaea;
+    --bg-soft: #fafafa;
+    --accent: #0A66C2;
+  }
 
-# Ufuk Demir
+  * { box-sizing: border-box; }
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat)](https://www.linkedin.com/in/ufukdemiir)
-[![Pinterest](https://img.shields.io/badge/Pinterest-E60023?style=flat)](https://tr.pinterest.com/demiirufuk/)
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
 
-*Türk Dili ve Edebiyatı geçmişimi dijital araçlarla birleştirerek içerik üretimi, marka geliştirme ve no-code/low-code çözümler üzerine çalışıyorum. Dijital pazarlama, yapay zeka destekli otomasyon ve deneysel marka projeleri ilgi alanlarım arasında.*
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
 
-`Türk Dili ve Edebiyatı` · `No-Code & Low-Code` · `Dijital Pazarlama` · `İçerik Üreticiliği & Dijital Yayıncılık`
+  header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
+  }
+
+  .bio {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: opacity 0.2s;
+  }
+
+  .social a:hover { opacity: 0.85; }
+
+  .social a.linkedin { background: #0A66C2; }
+  .social a.pinterest { background: #E60023; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+  }
+
+  .project {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin-bottom: 1.25rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .project:hover {
+    border-color: #d4d4d4;
+    transform: translateY(-2px);
+  }
+
+  .project-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .project-badge {
+    font-size: 0.7rem;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    color: var(--faint);
+    white-space: nowrap;
+  }
+
+  .project p {
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin: 0 0 1.1rem;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .project-links a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    transition: opacity 0.2s;
+  }
+
+  .project-links a:hover { opacity: 0.8; }
+
+  .btn-primary {
+    background: var(--ink);
+    color: #fff;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+
+  footer {
+    text-align: center;
+    color: var(--faint);
+    font-size: 0.85rem;
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1>Ufuk Demir</h1>
+    <p class="bio">
+      Türk Dili ve Edebiyatı geçmişimi dijital araçlarla birleştirerek içerik üretimi, marka geliştirme ve no-code/low-code çözümler üzerine çalışıyorum. Dijital pazarlama, yapay zeka destekli otomasyon ve deneysel marka projeleri ilgi alanlarım arasında.
+    </p>
+    <div class="tags">
+      <span class="tag">Türk Dili ve Edebiyatı</span>
+      <span class="tag">No-Code &amp; Low-Code</span>
+      <span class="tag">Dijital Pazarlama</span>
+      <span class="tag">İçerik Üreticiliği &amp; Dijital Yayıncılık</span>
+    </div>
+    <div class="social">
+      <a class="linkedin" href="https://www.linkedin.com/in/ufukdemiir" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="pinterest" href="https://tr.pinterest.com/demiirufuk/" target="_blank" rel="noopener">Pinterest</a>
+    </div>
+  </header>
+
+  <hr>
+
+  <section>
+    <h2>💠 Öne Çıkan Projeler</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <h3 class="project-title">Çalakalem</h3>
+        <span class="project-badge">Kişisel Proje</span>
+      </div>
+      <p>
+        Kusursuzluk baskısından uzak, alelacele ve gelişigüzel yazılan günlük 10 dakikalık yazı egzersizleri. GitHub Actions ile otomatik seri takibi yapan, canlı bir GitHub Pages sitesiyle sunulan kişisel bir yazma pratiği arşivi.
+      </p>
+      <div class="project-links">
+        <a class="btn-primary" href="https://ufukdemiir.github.io/Calakalem/" target="_blank" rel="noopener">Siteyi Ziyaret Et</a>
+        <a class="btn-secondary" href="https://github.com/ufukdemiir/Calakalem" target="_blank" rel="noopener">GitHub Reposu</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3 class="project-title">CONDEA</h3>
+        <span class="project-badge">Bootcamp · Takım Projesi</span>
+      </div>
+      <p>
+        YZTA 2026 Bootcamp kapsamında 5 kişilik bir ekiple geliştirilen, YouTube yorumlarını analiz eden ve Google Gemini desteğiyle içerik önerilerini sınıflandırıp içerik üreticilerine periyodik raporlar sunan yapay zeka destekli otomasyon sistemi. Ekipte Scrum Master olarak yer aldım.
+      </p>
+      <div class="project-links">
+        <a class="btn-secondary" href="https://github.com/ezg441/CONDEA" target="_blank" rel="noopener">GitHub Reposu</a>
+      </div>
+    </div>
+
+    <!--
+      Yeni bir proje eklemek için yukarıdaki <div class="project">...</div>
+      bloklarından birini kopyalayıp bu yorumun üzerine yapıştır ve
+      başlık / açıklama / linkleri güncelle.
+    -->
+
+  </section>
+
+  <footer>
+    Son güncelleme: Temmuz 2026
+  </footer>
 
 </div>
 
----
-
-## 💠 Öne Çıkan Projeler
-
-### 📝 Çalakalem
-
-Kusursuzluk baskısından uzak, alelacele ve gelişigüzel yazılan günlük 10 dakikalık yazı egzersizleri. GitHub Actions ile otomatik seri takibi yapan, canlı bir GitHub Pages sitesiyle sunulan kişisel bir yazma pratiği arşivi.
-
-[![Siteyi Ziyaret Et](https://img.shields.io/badge/Siteyi_Ziyaret_Et-111111?style=flat-square)](https://ufukdemiir.github.io/Calakalem/)
-[![Repo](https://img.shields.io/badge/Repo-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/ufukdemiir/Calakalem)
-
-### 🤖 CONDEA
-
-YZTA 2026 Bootcamp kapsamında 5 kişilik bir ekiple geliştirilen, YouTube yorumlarını analiz eden ve Google Gemini desteğiyle içerik önerilerini sınıflandırıp içerik üreticilerine periyodik raporlar sunan yapay zeka destekli otomasyon sistemi. Ekipte Scrum Master olarak yer aldım.
-
-[![Repo](https://img.shields.io/badge/Repo-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/ezg441/CONDEA)
-
-<!-- Yeni bir proje eklemek için yukarıdaki ### başlık + açıklama + badge bloklarından birini kopyalayıp aşağıya ekle. -->
-
----
-
-<div align="center">
-  <sub>Son güncelleme: Temmuz 2026</sub>
-  <br><br>
-  <img src="https://komarev.com/ghpvc/?username=ufukdemiir&color=0A66C2&style=flat-square&label=Toplam%20Görüntülenme%20Sayısı" alt="Ziyaretçi Sayısı">
-</div>
+</body>
+</html>
